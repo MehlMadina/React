@@ -1,7 +1,8 @@
 import React from "react";
+import ToDoList from "../ToDoList";
 import s from "./index.module.css";
 
-function User({ id, firstname, lastname, active, avatar }) {
+function User({ id, firstname, lastname, active, avatar, todo }) {
   const status = active ? "active" : "not active";
   const backgroundColor = active ? "lightgreen" : "lightgrey";
   const img_url =
@@ -14,10 +15,11 @@ function User({ id, firstname, lastname, active, avatar }) {
 
   return (
     <div style={card_style} className={s.card}>
-      <p>{id}</p>
-      <p>{firstname}</p>
-      <p>{lastname}</p>
-      <p>{status}</p>
+      <p>ID: {id}</p>
+      <p>First name: {firstname}</p>
+      <p>Last name: {lastname}</p>
+      <p>Status: {status}</p>
+      <ToDoList tasks={todo} />
       <img src={img_url} alt="avatar" className={s.avatar} />
     </div>
   );

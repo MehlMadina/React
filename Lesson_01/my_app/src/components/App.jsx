@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       {/* {users.map((el) => (
         <User key={el.id} firstname={el.firstname} lastname={el.lastname} />
-      ))} */
-        users.map(el => <User key={el.id} {...el}/>)
+      ))}  36.36*/
+        users.map(el => <User key={el.id} {...el} />)
       }
     </div>
   );
