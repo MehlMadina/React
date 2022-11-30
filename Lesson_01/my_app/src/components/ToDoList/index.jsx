@@ -6,7 +6,9 @@ export default function ToDoList({ tasks }) {
     <div>
         <p>Tasks:</p>
         {
-            tasks.map(task => <ToDoItem key={task.id} {...task}/>)
+          tasks
+          ? tasks.map(task => <ToDoItem key={task.id} {...task}/>)
+          : <p>Дел нет</p>
         }
     </div>
   )

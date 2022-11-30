@@ -29,23 +29,7 @@ export const users = [
     lastname: "Petrova",
     active: true,
     avatar: "https://reqres.in/img/faces/2-image.jpg",
-    todo: [
-      {
-        id: 1,
-        title: "купить хлеб",
-        done: true,
-      },
-      {
-        id: 2,
-        title: "забрать документы",
-        done: true,
-      },
-      {
-        id: 3,
-        title: "продать хлеб дороже",
-        done: false,
-      },
-    ],
+    
   },
   {
     id: 3,
