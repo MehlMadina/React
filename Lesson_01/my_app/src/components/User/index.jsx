@@ -6,7 +6,7 @@ function User({ id, firstname, lastname, active, avatar, todo }) {
   const status = active ? "active" : "not active";
   const backgroundColor = active ? "lightgreen" : "lightgrey";
   const img_url =
-    avatar ??
+    avatar ??  // оператор нулевого слияния
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png";
 
   const card_style = {
