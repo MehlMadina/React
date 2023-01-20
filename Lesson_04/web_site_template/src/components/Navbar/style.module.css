@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+.nav_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav_menu {
+    font-family: 'Roboto';
+    list-style: none;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    gap: 68px;
+}
