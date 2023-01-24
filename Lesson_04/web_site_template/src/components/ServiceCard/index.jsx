@@ -1,4 +1,5 @@
 import React from 'react'
+import s from './index.module.css'
 
 export default function ServiceCard({ title, img}) {
 
@@ -7,9 +8,8 @@ const cards_style = {
 }
 
   return (
-    <div style={cards_style}>
+    <div style={cards_style} className={s.card_item}>
         { title }
     </div>
   )
 }
-// HW grid 6 blocks
