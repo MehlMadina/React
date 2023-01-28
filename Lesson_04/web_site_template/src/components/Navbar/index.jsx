@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './media/buh_one_logo.png'
 import s from './style.module.css'
+import { MenuOutlined } from '@ant-design/icons'
 
 export default function Navbar() {
   return (
@@ -15,6 +16,7 @@ export default function Navbar() {
             <li>О компании</li>
             <li>Контанты</li>
         </ul>
+        <MenuOutlined className={s.menu_icon}/>
     </nav>
   )
 }
