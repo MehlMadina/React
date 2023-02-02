@@ -1,6 +1,7 @@
 import PostsContainer from "../PostsContainer";
 import { posts_data } from "../../data/post";
 import { useState } from "react";
+import AddPostForm from "../AddPostForm";
 
 
 function App() {
@@ -23,10 +24,20 @@ const add_comment = (id, value) => {
   target.comments.push(comment);
   setPosts([...posts]);
 }
+
+
+const add_post = (title, text) => setPosts([...posts, {
+  id: Date.now(),
+  title,
+  text,
+  like: false,
+  comments: []
+}])
    
 
   return (
     <div>
+      <AddPostForm add_post={add_post}/>
       <PostsContainer posts={posts} change_like={change_like} add_comment={add_comment} />
     </div>
   );

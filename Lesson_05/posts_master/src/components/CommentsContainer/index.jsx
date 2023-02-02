@@ -1,5 +1,5 @@
 import React from 'react'
-import AddCommentForm from '../../AddCommentForm'
+import AddCommentForm from '../AddCommentForm'
 import Comments from '../Comments'
 
 
