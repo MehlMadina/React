@@ -6,8 +6,6 @@
 }
 
 .form_item {
-    border: 1px solid black;
-    border-radius: 15px;
     width: 400px;
     padding: 20px;
 }
@@ -25,4 +23,11 @@
     font-weight: 400;
     margin: 24px 0;
     font-family: 'Nunito';
+}
+
+.error_message {
+    text-align: right;
+    padding: 5px;
+    font-size: 15px;
+    color: #e94e4e;
 }

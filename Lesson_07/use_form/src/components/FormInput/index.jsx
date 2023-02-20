@@ -1,10 +1,8 @@
-import React from 'react';
-import s from './style.module.css';
+import React, { forwardRef } from "react";
+import s from "./style.module.css";
 
-export default function FormInput(props) {
-  return (
-    <input {...props} className={s.form_input}/>
+const FormInput = forwardRef((props, ref) => {
+  return <input {...props} className={s.form_input} ref={ref} />;
+});
 
-    
-  )
-}
+export default FormInput;
