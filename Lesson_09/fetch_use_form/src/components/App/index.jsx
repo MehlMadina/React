@@ -10,6 +10,8 @@ import { Context } from "../../context";
 function App() {
   const [users, setUsers] = useState([]);
 
+  const createUsersCard = user => setUsers(prev => [...prev, user])
+
   useEffect(() => {
     getUsers(setUsers);
   }, []);
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <Context.Provider value={{ users }}>
+      <Context.Provider value={{ users, createUsersCard }}>
         <NavMenu />
         <Routes>
           <Route path="/users_page" element={<UsersPage />} />
