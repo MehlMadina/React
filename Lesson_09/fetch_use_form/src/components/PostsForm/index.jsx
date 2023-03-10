@@ -16,10 +16,14 @@ const {  createNewPost } = useContext(Context);
     mode: "onBlur",
   });
 
+  const idRegister = register("userId", {
+    required: '* Field "ID" is requered',
+  });
+
   const titleRegister = register("title", {
     required: '* Field "Title" is requered',
   });
-  const descriptionRegister = register("description", {
+  const descriptionRegister = register("body", {
     required: '* Field "Description" is requered',
   });
 
@@ -28,6 +32,12 @@ const {  createNewPost } = useContext(Context);
   return (
     <div className={s.add_post_form}>
       <form onSubmit={handleSubmit(submit)}>
+      <input
+          type="text"
+          name="userId"
+          placeholder="ID"
+          {...idRegister}
+        />
         <input
           type="text"
           name="title"
@@ -36,7 +46,7 @@ const {  createNewPost } = useContext(Context);
         />
         <input
           type="text"
-          name="description"
+          name="body"
           placeholder="Description"
           {...descriptionRegister}
         />
@@ -45,8 +55,8 @@ const {  createNewPost } = useContext(Context);
 
       <div>
         <div>{errors.title && <p>{errors.title?.message}</p>}</div>
-
-        <div>{errors.description && <p>{errors.description?.message}</p>}</div>
+        <div>{errors.userId && <p>{errors.userId?.message}</p>}</div>
+        <div>{errors.body && <p>{errors.body?.message}</p>}</div>
       </div>
     </div>
   );
